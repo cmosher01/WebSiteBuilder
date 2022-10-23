@@ -14,6 +14,7 @@ cid=$(git rev-parse HEAD)
 git checkout docs
 git rebase main
 mkdir -p docs
+./gradlew clean
 ./gradlew run -q >docs/index.html
 git add docs
 git status
