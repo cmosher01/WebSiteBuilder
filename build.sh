@@ -12,6 +12,11 @@ git config --global user.name "build.sh"
 
 cid=$(git rev-parse HEAD)
 
+git show-ref
+git branch -avv
+git status
+ls -l ./.git/refs/heads/
+
 git checkout docs
 git rebase main
 mkdir -p docs
