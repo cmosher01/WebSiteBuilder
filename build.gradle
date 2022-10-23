@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+}
+
+version = '1.0.0'
+
+group = 'nu.mine.mosher'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.apache.commons', name: 'commons-csv', version: 'latest.release'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of 17
+    }
+}
+
+application {
+    mainClass.set 'nu.mine.mosher.WebSiteBuilder'
+}
