@@ -7,6 +7,9 @@ ls -al
 git --version
 java -version
 
+git config --global user.email "git@github.com"
+git config --global user.name "build.sh"
+
 cid=$(git rev-parse HEAD)
 
 git checkout docs
